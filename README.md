@@ -88,7 +88,7 @@
 
 # 项目一：图像分类进阶
 
-以一个小型的图像数据集为例，从0开始完成数据的加载，模型的训练和评估。注意以下几点：
+以一个小型的图像数据集（在文件夹 data/project_1 中）为例，从0开始完成数据的加载，模型的训练和评估。注意以下几点：
 
 1. 整个项目的架构是否清晰？（将代码拆分为多个易读的文件）
 2. 是否具有一定的日志信息？（可以借助 [tqdm](https://tqdm.github.io/) 模块和 [logging](https://docs.python.org/zh-cn/3/library/logging.html#module-logging) 模块）
