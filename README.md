@@ -1,9 +1,18 @@
 # 说明
 
 - 这是一份为深度学习新手准备的学习路线，主要围绕**图像分类**进行设计。
+
 - 这份学习路线以 [PyTorch](https://pytorch.org/) 深度学习框架为主。
+
 - 配置实验环境过程中，需要对应自己的系统 (Windows/Linux/MacOS) 安装软件。
+
 - 出现的“任务”项需要自行查阅资料。
+
+- 参考学习资料：
+
+  PDF - [动⼿学深度学习](https://zh-v2.d2l.ai/d2l-zh-pytorch.pdf)
+
+  视频 - [动手学深度学习 PyTorch版](https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497)
 
 # 配置实验环境
 
@@ -69,7 +78,7 @@
 
 ## 任务
 
-学习完官网教程后，搭建一个五层的网络（卷积层\*3，全连接层\*2，每层的卷积核大小，神经元数量等参数自己指定），用 MNIST 数据集进行训练（共训练20个epoch，在第10，15个epoch进行梯度下降）。并完成以下任务：
+学习完官网教程后，搭建一个五层的网络（卷积层\*3，全连接层\*2，每层的卷积核大小，神经元数量等参数自己指定），用 MNIST 数据集进行训练（共训练20个epoch，在第10，15个epoch进行学习率下降）。并完成以下任务：
 
 
 - [ ] 计算从输入到输出，中间 tensor size 的变化。
@@ -78,6 +87,13 @@
 - [ ] 用 [matplotlib](https://matplotlib.org/stable/gallery/index.html) 将上一步保存的数据绘制成曲线。
 
 # 项目一：图像分类进阶
+
+以一个小型的图像数据集为例，从0开始完成数据的加载，模型的训练和评估。注意以下几点：
+
+1. 整个项目的架构是否清晰？（将代码拆分为多个易读的文件）
+2. 是否具有一定的日志信息？（可以借助 [tqdm](https://tqdm.github.io/) 模块和 [logging](https://docs.python.org/zh-cn/3/library/logging.html#module-logging) 模块）
+3. 如何加载图片数据？（用两种方式实现，1-继承 [Dataset](https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset) 类；2-继承 [ImageFolder](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageFolder.html#imagefolder) 类）
+4. 如何管理超参数？（可以借助 [dataclasses](https://docs.python.org/zh-cn/3/library/dataclasses.html#module-dataclasses) 模块）
 
 # 项目二：对抗训练
 
