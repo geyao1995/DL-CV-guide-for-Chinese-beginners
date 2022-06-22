@@ -1,3 +1,11 @@
+# 工具推荐
+
+在开始之前，先推荐一些可以提高学习效率的工具：
+
+- 文献管理软件：[zotero](https://www.zotero.org/)
+- 笔记软件：[Notion](https://www.notion.so/)
+- 为了使用谷歌搜索引擎的梯子工具：[GLaDOS](https://glados.rocks/) (可填写邀请码：UAMXT-VSWIH-ABPTX-XUY1S, 如果有 edu 邮箱，可以免费获得一年的使用时间)
+
 # 说明
 
 - 这是一份为深度学习新手准备的学习路线，主要围绕**图像分类**进行设计。
