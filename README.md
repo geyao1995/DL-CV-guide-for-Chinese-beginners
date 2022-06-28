@@ -69,6 +69,10 @@
 
 如果设备无可用GPU，导致程序运行过于缓慢，可以将程序转移到云GPU服务器上运行。面向深度学习的云GPU服务器一般会自带配置好的环境，开箱即用。
 
+推荐平台：
+
+- [AutoDL](https://www.autodl.com/register?code=37953cd1-0bb7-4042-8d04-a603280714a6) (性价比高，文档详细)
+
 # 阅读PyTorch官方教程
 
 从官网的教程入手：PyTorch [Tutorials](https://pytorch.org/tutorials)
