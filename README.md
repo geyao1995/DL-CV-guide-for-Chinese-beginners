@@ -100,12 +100,14 @@
 
 # 项目一：图像分类进阶
 
-以一个小型的图像数据集（在文件夹 data/project_1 中）为例，从0开始完成数据的加载，模型的训练和评估。注意以下几点：
+以一个小型的图像数据集（在文件夹 [data/project_1](https://github.com/geyao1995/DL-CV-guide-for-Chinese-beginners/tree/main/data/project_1_standard_classification) 中）为例，从0开始完成数据的加载，模型的训练和评估。注意以下几点：
 
 1. 整个项目的架构是否清晰？（将代码拆分为多个易读的文件）
 2. 是否具有一定的日志信息？（可以借助 [tqdm](https://tqdm.github.io/) 模块和 [logging](https://docs.python.org/zh-cn/3/library/logging.html#module-logging) 模块）
 3. 如何加载图片数据？（用两种方式实现，1-继承 [Dataset](https://pytorch.org/docs/stable/data.html#torch.utils.data.Dataset) 类；2-继承 [ImageFolder](https://pytorch.org/vision/stable/generated/torchvision.datasets.ImageFolder.html#imagefolder) 类）
 4. 如何管理超参数？（可以借助 [dataclasses](https://docs.python.org/zh-cn/3/library/dataclasses.html#module-dataclasses) 模块）
+
+项目一提供参考代码：见 [code/project_1](https://github.com/geyao1995/DL-CV-guide-for-Chinese-beginners/tree/main/code/project_1_standard_classification)
 
 # 项目二：对抗训练
 
