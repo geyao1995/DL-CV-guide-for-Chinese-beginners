@@ -104,7 +104,7 @@
 # 关于 Python 的编程建议
 
 1. 用 [Pathlib](https://docs.python.org/zh-cn/3/library/pathlib.html?highlight=pathlib) 模块操作路径 (代替 `os.path`)。
-2. 用 [f-string](https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#formatted-string-literals) 格式化字符串 (代替 `str.format()`)。
+2. 用 [f-string](https://docs.python.org/zh-cn/3/tutorial/inputoutput.html#formatted-string-literals) 格式化字符串 (代替 `str.format()`)。
 
 # 项目一：图像分类进阶
 

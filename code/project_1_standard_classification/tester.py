@@ -11,6 +11,8 @@ class CarTester:
         self.device = device
 
     def evaluate(self):
+        self.model.eval()
+        
         correct = 0
         total = 0
 
