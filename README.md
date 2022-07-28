@@ -18,9 +18,10 @@
 
 - 参考学习资料：
 
-  PDF - [动⼿学深度学习](https://zh-v2.d2l.ai/d2l-zh-pytorch.pdf)
-
-  视频 - [动手学深度学习 PyTorch版](https://space.bilibili.com/1567748478/channel/seriesdetail?sid=358497)
+  - [动手学深度学习](https://zh-v2.d2l.ai/)
+  - [Learn PyTorch for Deep Learning](https://github.com/mrdbourke/pytorch-deep-learning)
+  
+  
 
 # 配置实验环境
 
@@ -32,11 +33,13 @@
 
 3. PyTorch
 
-其中，前两项可以用来开发一般的Python项目，最后一项 PyTorch 是为深度学习特别安装的。下面来对它们进行逐一安装/配置。
+其中，前两项可以用来开发一般的Python项目，最后一项 PyTorch 是为深度学习特别安装的。
+
+下面来对它们进行逐一安装/配置。
 
 ## Conda
 
-1. 下载 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 并进行安装。
+1. 从官方网站 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) 下载 Conda 并进行安装，注意选择 [对应的版本](https://docs.conda.io/en/latest/miniconda.html#id27)。Conda 包含了Python，也就是说，安装完Conda之后不用再单独安装Python。
 
 2. 将 conda 源更换到国内，参考教程 [Anaconda 镜像使用帮助](https://mirror.tuna.tsinghua.edu.cn/help/anaconda/) (需要查阅如何执行 conda 命令)。
 
@@ -63,7 +66,7 @@
 
 ⚠️ 需要注意你的设备是否存在可用GPU
 
-切换到目标 conda 环境，按 [PyTorch](https://pytorch.org/) 官网说明，执行 conda 命令安装 PyTorch，如果你的设备没有可用 GPU (CUDA)，安装CPU版，否则安装GPU版。
+切换到目标 conda 环境，按 [PyTorch](https://pytorch.org/get-started/locally/) 官方安装说明，执行 conda 命令安装 PyTorch，如果你的设备没有可用 GPU (CUDA)，安装CPU版，否则安装GPU版。
 
 ## 租用云GPU服务器
 
@@ -97,6 +100,11 @@
 - [ ] 每隔2个 epoch 保存一次模型权重（在第2, 4, 6, ..., 18, 20个 epoch 结束后保存）。
 - [ ] 依次加载保存的权重，在 MNIST 测试集上进行测试，并将测试准确率以 [numpy](https://numpy.org/doc/stable/) 格式数据保存在本地。
 - [ ] 用 [matplotlib](https://matplotlib.org/stable/gallery/index.html) 将上一步保存的数据绘制成曲线。
+
+# 关于 Python 的编程建议
+
+1. 用 [Pathlib](https://docs.python.org/zh-cn/3/library/pathlib.html?highlight=pathlib) 模块操作路径 (代替 `os.path`)。
+2. 用 [f-string](https://docs.python.org/zh-cn/3/reference/lexical_analysis.html#formatted-string-literals) 格式化字符串 (代替 `str.format()`)。
 
 # 项目一：图像分类进阶
 
