@@ -1,11 +1,12 @@
-# 工具推荐
+# 目录
 
-在开始之前，先推荐一些可以提高学习效率的工具：
-
-- 文献管理软件：[zotero](https://www.zotero.org/)
-- 笔记软件：[Notion](https://www.notion.so/)
-- 为了使用谷歌搜索引擎的梯子工具：[GLaDOS](https://glados.rocks/) (可填写邀请码：UAMXT-VSWIH-ABPTX-XUY1S, 如果有 edu 邮箱，可以免费获得一年的使用时间，参考 [GLaDOS Education](https://glados.rocks/console/education))
-
+1. [说明](#说明)
+2. [工具推荐](#工具推荐)
+3. [配置实验环境](#配置实验环境)
+4. [阅读PyTorch官方教程](#阅读PyTorch官方教程)
+5. [关于 Python 的编程建议](#关于 Python 的编程建议)
+6. [项目一：图像分类进阶](#项目一：图像分类进阶)
+7. [项目二：样本“投毒”](#项目二：样本“投毒”)
 # 说明
 
 - 这是一份为深度学习新手准备的学习路线，主要围绕**图像分类**进行设计。
@@ -20,8 +21,15 @@
 
   - [动手学深度学习](https://zh-v2.d2l.ai/)
   - [Learn PyTorch for Deep Learning](https://github.com/mrdbourke/pytorch-deep-learning)
-  
-  
+
+# 工具推荐
+
+在开始之前，先推荐一些可以提高学习效率的工具：
+
+- 文献管理软件：[zotero](https://www.zotero.org/)
+- 笔记软件：[Notion](https://www.notion.so/)
+- 为了使用谷歌搜索引擎的梯子工具：[GLaDOS](https://glados.rocks/) (可填写邀请码：UAMXT-VSWIH-ABPTX-XUY1S, 如果有 edu 邮箱，可以免费获得一年的使用时间，参考 [GLaDOS Education](https://glados.rocks/console/education))
+
 
 # 配置实验环境
 
@@ -117,11 +125,33 @@
 
 项目一提供参考代码：见 [code/project_1](https://github.com/geyao1995/DL-CV-guide-for-Chinese-beginners/tree/main/code/project_1_standard_classification)
 
-# 项目二：对抗训练
+# 项目二：样本“投毒”
 
-# 项目三:
+对于一个图像分类任务，当我们**故意改变**神经网络训练或测试过程中的部分图片数据，可以观察到一些意料之外的结果，这些结果能够帮助我们分析，理解神经网络的特性。
 
+我们以MNIST数据集为例，进行一些实验。
 
+<img src="./imgs/mnist_8.png" alt="mnist_8" style="zoom: 67%;" />
 
+**实验一：**对于<u>训练集中</u>所有标签为 “8” 的图片，将其左上角的 $s \times s$ 区域的像素值变为最大（将这种修改方式记为 $\operatorname{T}$ 变换，$s$ 设置为 $2$，如上图所示）。用这种修改后的训练集来训练一个模型，完成以下几点：
 
+1. 显示部分训练图片，以检查是否修改成功（显示修改后的图片和对应标签即可，不需要像上方示例图片一样显示具体像素值）。
+2. 模型在原始测试集上的准确率如何？
+3. 如果将<u>测试集中</u>所有标签为 “8” 的图片，进行 $\operatorname{T}$ 变换，模型在这种测试集上的表现如何？
+4. 如果将<u>测试集中</u>所有标签为 “3” 的图片，进行 $\operatorname{T}$ 变换，模型在这种测试集上的表现如何？
+5. 如果<u>训练集中</u>进行 $\operatorname{T}$ 变换的是标签为 “1” 的图片，上述实验的结果又如何？
+6. $\operatorname{T}$ 变换时，将 $s$ 修改为 $6$，上述实验的结果又如何？
 
+**实验二：**现用一种新的方式修改训练集。即对原始训练集中的每个类别，都随机选择 $m$ 张图片进行任务一中的 $\operatorname{T}$ 变换（此时训练图片数量仍然是 $60,000$）。将进行 $\operatorname{T}$ 变换后的图片划分到一个新的类别（标签记为 “10”）中。用这一训练集（一共有11个类别）训练一个模型（模型可以将图片分为11个类别中的一类），完成以下几点：
+
+1. 模型在原始测试集上的准确率如何？
+2. 如果在测试集的每个类别中，都随机选择 $n$ 张图片，进行 $\operatorname{T}$ 变换（同时改变他们的标签为 “10”），模型在这这些图片上的准确率会如何？请分类别统计。
+3. 请调整参数 $s,m,n$ 中的一个或多个，重复研究上面两个问题。
+
+**要求：**
+
+1. 相关绘图用 [matplotlib 库](https://matplotlib.org/) 完成。
+2. 请以直观的方式展现上述实验结果（表格，折线图，柱状图，...），一些绘图样例可以参考 [example plots](https://matplotlib.org/stable/gallery/index#examples)。
+3. 对实现结果进行分析，必要时可以再设计实验验证分析是否合理。
+
+**参考代码：**无
