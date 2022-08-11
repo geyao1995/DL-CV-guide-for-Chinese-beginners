@@ -3,7 +3,7 @@
 1. [说明](#说明)
 2. [工具推荐](#工具推荐)
 3. [配置实验环境](#配置实验环境)
-4. [阅读PyTorch官方教程](#阅读PyTorch官方教程)
+4. [阅读 PyTorch 官方教程](#阅读-PyTorch-官方教程)
 5. [关于 Python 的编程建议](#关于-python-的编程建议)
 6. [项目一: 图像分类进阶](#项目一图像分类进阶)
 7. [项目二: 样本“投毒”](#项目二样本投毒)
@@ -84,7 +84,7 @@
 
 - [AutoDL](https://www.autodl.com/register?code=37953cd1-0bb7-4042-8d04-a603280714a6) (性价比高，文档详细)
 
-# 阅读PyTorch官方教程
+# 阅读 PyTorch 官方教程
 
 从官网的教程入手：PyTorch [Tutorials](https://pytorch.org/tutorials)
 
