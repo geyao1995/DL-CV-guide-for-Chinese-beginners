@@ -131,7 +131,9 @@
 
 我们以MNIST数据集为例，进行一些实验。
 
-<img src="./imgs/mnist_8.png" alt="mnist_8" width="250" align="center" />
+<p align="center">
+  <img src="./imgs/mnist_8.png" alt="mnist_8" width="300"/>
+</p>
 
 **实验一**：对于<u>训练集中</u>所有标签为 “8” 的图片，将其左上角的 $s \times s$ 区域的像素值变为最大（将这种修改方式记为 $\operatorname{T}$ 变换，$s$ 设置为 $2$，如上图所示）。用这种修改后的训练集来训练一个模型，完成以下几点：
 
